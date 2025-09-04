@@ -1,0 +1,123 @@
+@media (min-width: 38rem){
+    :root {
+    --heading-font: Gruppo, Times, serif;
+    --body-font: Quicksand, Times, serif;
+    /* --primary-color: #2563eb;
+    --secondary-color: #f59e42;
+    --accent-color: #10b981;
+    --background-color: #f9fafb;*/
+    --text-color: #1e293b; 
+    --color-primary: #4a5568;
+    --color-secondary: #a0aec0;
+    --color-background: #f7fafc;
+    }
+
+    /* *******************HEADER****************** */
+    header{
+        display:grid;
+        grid-template-columns: 30px auto;
+    }
+
+    #header-text {
+        font-size: 1.5rem;
+    }
+
+
+    /* ******************NAVIGATION MENU******************** */
+    .navigation{
+        display: block;
+        background-color:var(--text-color);
+        padding-bottom: 5px ;
+    }
+
+    .navigation ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation ul li a{
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 2px;
+    }
+
+    
+    .navigation ul li a:hover {
+        background-color: var(--color-background);
+        color: var(--text-color);
+        font-weight: 600;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+
+    /* ****************** ABOUT ******************** */
+    p{
+    background-color: var(--color-secondary);
+    padding:20px;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+
+    .about-grid{
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    #about{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #about p{
+        padding: 10%;
+    }
+
+
+    /* ****************** STUDENT PHOTO ******************** */
+    #student-photo{
+        margin-top: 0;
+    }
+
+    #student-photo img{
+        min-width: 100px;
+    }
+
+    /* ****************** COURSES ******************** */
+    #course-buttons{
+        display:flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+
+    #courses button{
+        padding: 12px 20px;
+        font-weight: 500;
+    }
+
+    #courses p{
+    font-size: 18px;
+    }
+
+    .courseCards ul li{
+        max-width: 50%;
+        margin: 1.5% 25%;
+    }
+
+    /* ***************** FOOTER ******************* */
+    footer{
+        margin-top: 5%;
+        padding-top: 1.5%;
+        border-top:  solid 1px #bebebe;
+        background-color: #c4cfd6;
+    }
+
+    #socials a img{
+    width: 37px;
+    }
+
+}

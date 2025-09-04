@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Samuel Okwan Paintsil">
     <meta name="description" content="This is the home page for WDD 231 - Web Frontend Development I">
+    <!-- **************** GOOGLE FONTS ****************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!--************** LINKS TO CSS FILES ****************-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- ****************** SCRIPTS ********************* -->
+    <script src="scripts/scripts.js" defer></script>
+
     <title>WDD 231 - Web Frontend Development I</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/square-terminal.svg" alt="square terminal logo">
+        <span id="header-text">Samuel Okwan Paintsil</span>
+        <button id="ham-button" class="hamburger" aria-label="navigation links"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="current"><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="about-grid">
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta sint itaque quam nesciunt
+                    accusamus eius id beatae asperiores. Iure exercitationem error blanditiis animi ex commodi vel
+                    veritatis
+                    inventore odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur recusandae
+                    dicta debitis totam, aut quae qui. Enim, alias aspernatur doloribus.</p>
+            </section>
+
+            <section id="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Samuel Okwan Paintsil">
+            </section>
+
+        </section>
+        <section id="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div id="course-buttons">
+                <button id="allContainer">All Courses</button>
+                <button id="wddContainer">WDD Courses</button>
+                <button id="cseContainer">CSE Courses</button>
+
+            </div>
+            <p>Completed courses have a &#10003; mark</p>
+
+
+            <div class="courseCards">
+                <ul id="courseCards">
+                </ul>
+                <p id="totalCredits"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div id="socials">
+            <a href="#"><img src="images/github.svg" alt="github icon"></a>
+            <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
+            <a href="#"><img src="images/linkedin.svg" alt="instagram icon"></a>
+        </div>
+        <div>
+            <p>&copy; <span id="currentYear"></span> | Samuel Okwan Paintsil | Ghana</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+    </footer>
+
 </body>
-</html>
+
+</html

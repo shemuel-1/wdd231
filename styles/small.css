@@ -1,0 +1,219 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --heading-font: Gruppo, Times, serif;
+    --body-font: Quicksand, Times, serif;
+    /* --primary-color: #2563eb;
+    --secondary-color: #f59e42;
+    --accent-color: #10b981;
+    --background-color: #f9fafb;*/
+    --text-color: #1e293b; 
+    --color-primary: #4a5568;
+    --color-secondary: #a0aec0;
+    --color-background: #f7fafc;
+}
+
+body{
+    background-color: var(--color-background);
+}
+
+/* **************** HEADER ****************** */
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    gap: 5px;
+    align-items: end;
+    padding: 7px 0 7px 12px;
+    border-bottom: solid 1px #bebebe;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#header-text {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* ******************NAVIGATION MENU******************** */
+.hamburger {
+    display: block;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+    background-color: var(--text-color);
+}
+
+.navigation ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.navigation ul li a {
+    display: block;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--color-background);
+    padding-bottom: 10px;
+
+}
+
+main{
+    margin: 15px;
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+
+h1,h2,h3{
+    font-family: var(--heading-font);
+    padding:15px;
+    color: var(--text-color);
+}
+
+
+/* ****************** ABOUT ******************** */
+p{
+    background-color: var(--color-secondary);
+    padding:20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#about h2{
+    color: var(--color-background);
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+
+/* ****************** STUDENT PHOTO ******************** */
+#student-photo{
+    background-color: var(--color-secondary);
+    margin-top:15px ;
+    padding: auto;
+}
+
+#student-photo h2{
+    color: var(--color-background);
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+#student-photo img{
+    width: 60%;
+    border-radius: 8px;
+    margin: 5% 20%;
+}
+
+
+/* ****************** COURSES ******************** */
+#courses{
+    margin-top: 15px;
+}
+
+#courses h2{
+    color: var(--color-background);
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+#courses button{
+    border: none;
+    background-color: var(--text-color);
+    color: var(--color-background);
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+}
+
+#courses p{
+    text-align: center;
+    background-color: var(--color-background);
+    margin: 0;
+    font-size: smaller;
+}
+
+#courses button:hover{
+    background-color: var(--color-primary);
+}
+
+.courseCards ul {
+    list-style: none;
+}
+
+.courseCards ul li{
+    padding: 10px;
+    margin-bottom: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.courseCards ul li:hover{
+    background-color: var(--text-color);
+}
+
+
+/* **************** FOOTER ******************* */
+#socials {
+    display: flex;
+    justify-content: space-around;
+}
+
+#socials a{
+    text-decoration: none;
+}
+
+#socials a img{
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+footer{
+    padding-top: 2%;
+    background-color: #c4cfd6;
+}
+
+footer p{
+    font-family: var(--body-font);
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+}
