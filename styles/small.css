@@ -126,7 +126,6 @@ p{
 #student-photo{
     background-color: var(--color-secondary);
     margin-top:15px ;
-    padding: auto;
 }
 
 #student-photo h2{
