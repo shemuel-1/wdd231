@@ -137,6 +137,7 @@ p{
 
 #student-photo img{
     width: 60%;
+    height: auto;
     border-radius: 8px;
     margin: 5% 20%;
 }
