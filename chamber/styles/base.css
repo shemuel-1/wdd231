@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #0A2239;
+    --secondary-color: #E63946;
+    --accent-color: #FFB703;
+    --supporting-color: #219653;
+    --background-color: #F4F4F4;
+    --background-main: #fafbfd;
+    --text-color: #2E2E2E;
+    --heading-font: Poppins, verdana, "sans serif";
+    --body-font: Roboto, verdana, "sans serif";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px auto 44px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 0;
+}
+
+header img {
+    width: 100%;
+}
+
+#heading {
+    font-size: 1rem;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--background-color);
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 5px;
+    padding-left: 2%;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+nav #current {
+    background-color: var(--supporting-color);
+}
+
+
+.hamburger {
+    display: block;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--background-color);
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--background-color);
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+    background-color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    padding: 12px;
+}
+
+main {
+    margin: 2%;
+    font-family: var(--body-font);
+    border-radius: 8px;
+    background-color: var(--background-main);
+    border-left: 8px solid var(--accent-color);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.layout{
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.layout-btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.business-card.list img{
+    display: none;
+}
+
+.business-card.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap:8px;
+    max-width:100%;
+    font-size: smaller;
+    border: none;
+    margin: 1%;
+    box-shadow: none;
+    align-items: center;
+    padding: 0;
+}
+
+.business-card.list:nth-child(odd){
+    background-color: var(--secondary-color);
+}
+
+#businesses .business-card.list:nth-child(odd) a{
+    background-color: var(--secondary-color);
+    color: var(--background-main);
+}
+
+.business-card.list strong{
+    display: none;
+}
+
+#businesses .business-card.list h3{
+    font-size: smaller;
+} 
+
+
+
+.business-card {
+    margin: 10%;
+    padding: 5%;
+    border-radius: 8px;
+    border-left: 8px solid var(--secondary-color);
+    line-height: 1.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#businesses .business-card h3 {
+    margin: -3%;
+}
+
+.business-card p {
+    font-weight: 370;
+    text-align:justify;
+    margin-bottom: 20px;
+}
+
+.business-card img{
+    border-radius: 8px;
+    width: 100%;
+}
+
+.business-card a{
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+    background-color: var(--background-color);
+    border:1px solid var(--supporting-color);;
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: var(--heading-font);
+}
+
+#businesses .business-card.list a{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--background-main);
+    border-radius: none;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-size: small;
+    font-style: oblique;    
+}
+
+.business-card a:hover{
+    background-color: var(--secondary-color);
+    color: var(--background-main);
+    border: none;
+}
+
+footer h3 {
+    padding: 0;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#socials a {
+    text-decoration: none;
+}
+
+#socials a img {
+    width: 30px;
+}
+
+footer {
+    font-family: var(--body-font);
+    font-size: small;
+    line-height: 1.3rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 2%;
+    font-weight: 500;
+}
