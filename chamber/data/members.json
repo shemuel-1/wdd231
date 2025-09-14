@@ -1,7 +1,7 @@
 [
   {
     "name": "Stark Industries",
-    "address": "200 Park Avenue, New York, NY 10017",
+    "address": "200 Circle Avenue, Kokomlemle,  10017",
     "phone": "+1-212-555-0987",
     "website": "https://www.starkindustries.com",
     "image": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Akira Robotics",
-    "address": "1-7-1 Otemachi, Chiyoda City, Tokyo 100-0004, Japan",
+    "address": "1-7-1 Traffic, KasoaCity, Roundabout 100-0004",
     "phone": "+81-3-5550-1234",
     "website": "https://www.akirarobotics.co.jp",
     "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Wayne Enterprises",
-    "address": "1938 Wayne Tower, Gotham City, NJ 07101",
+    "address": "1938 Wayne Tower, AshaimanCity, AC 07101",
     "phone": "+1-201-555-6632",
     "website": "https://www.wayne-ent.com",
     "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -28,16 +28,16 @@
   },
   {
     "name": "Ghibli Studios",
-    "address": "4-1-1 Koganei, Tokyo 184-0004, Japan",
+    "address": "4-1-1 Typher, United States Of Ashaiman 184-0004",
     "phone": "+81-42-555-9876",
     "website": "https://www.ghibli-studios.jp",
-    "image": "https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg",
+    "image": "https://images.pexels.com/photos/33890866/pexels-photo-33890866.jpeg",
     "membership_level": 2,
     "industry": "Animation & Entertainment"
   },
   {
     "name": "Oscorp Industries",
-    "address": "1221 Avenue of the Americas, New York, NY 10020",
+    "address": "1221 Lovely Kpone Bola, Kpone, 10020",
     "phone": "+1-212-555-4567",
     "website": "https://www.oscorp.com",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Capsule Corporation",
-    "address": "777 West District, Christ's City, 100-0014",
+    "address": "777 North District, Christ's City, 100-0014",
     "phone": "+81-6-5550-7777",
     "website": "https://www.capsule-corp.com",
     "image": "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Xavier's School for Gifted Youngsters",
-    "address": "1407 Graymalkin Lane, Salem Center, NY 10588",
+    "address": "1407 X-Men, Tema Circle, 10588",
     "phone": "+1-914-555-0123",
     "website": "https://www.xavierschool.edu",
     "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",

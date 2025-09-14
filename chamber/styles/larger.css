@@ -1,0 +1,77 @@
+@media (min-width: 38rem){
+    header{
+        grid-template-columns: 50px auto;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    #heading{
+        font-size: 1.2rem;
+    }
+
+    .navigation{
+        display: block;
+        background-color: var(--text-color);
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        display: block;
+        padding: 8px 15px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        font-family: var(--heading-font);
+        font-size: 1rem;
+    }
+
+    nav ul li:hover{
+        background-color: var(--accent-color);
+    }
+
+    .navigation ul li a:hover{
+        text-decoration: underline;
+        color: var(--text-color);
+    }
+
+    nav #current:hover {
+    background-color: var(--accent-color);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .cards.list{
+        display: block;
+    }
+
+    .business-card.list{
+        font-size: 15px;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        text-align: justify;
+        justify-items: center;
+    }
+
+    footer #socials{
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #0A2239;
     --secondary-color: #E63946;
@@ -96,6 +102,7 @@ h3 {
 }
 
 main {
+    max-width: 98%;
     margin: 2%;
     font-family: var(--body-font);
     border-radius: 8px;
@@ -104,17 +111,19 @@ main {
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.layout{
+.layout {
     background-color: var(--primary-color);
     border-radius: 3px;
+    padding: 3px 8px;
 }
 
-.layout-btns{
+.layout-btns {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 3%;
 }
 
-.business-card.list img{
+.business-card.list img {
     display: none;
 }
 
@@ -127,26 +136,35 @@ main {
     border: none;
     margin: 1%;
     box-shadow: none;
+    border-radius: 0;
     align-items: center;
-    padding: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 8px;
 }
 
-.business-card.list:nth-child(odd){
+.business-card.list p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.business-card.list:nth-child(odd) {
     background-color: var(--secondary-color);
 }
 
-#businesses .business-card.list:nth-child(odd) a{
+#businesses .business-card.list:nth-child(odd) a {
     background-color: var(--secondary-color);
     color: var(--background-main);
 }
 
-.business-card.list strong{
+.business-card.list strong {
     display: none;
 }
 
-#businesses .business-card.list h3{
+#businesses .business-card.list h3 {
     font-size: smaller;
-} 
+    padding-left: 0;
+}
 
 
 
@@ -154,7 +172,6 @@ main {
     margin: 10%;
     padding: 5%;
     border-radius: 8px;
-    border-left: 8px solid var(--secondary-color);
     line-height: 1.5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -165,40 +182,40 @@ main {
 
 .business-card p {
     font-weight: 370;
-    text-align:justify;
+    text-align: left;
     margin-bottom: 20px;
 }
 
-.business-card img{
+.business-card img {
     border-radius: 8px;
     width: 100%;
 }
 
-.business-card a{
+.business-card a {
     text-decoration: none;
     padding: 10px 20px 10px 20px;
     margin-top: 20px;
     background-color: var(--background-color);
-    border:1px solid var(--supporting-color);;
+    border:1px solid var(--supporting-color);
     color: var(--text-color);
     border-radius: 8px;
     font-size: 15px;
     font-family: var(--heading-font);
 }
 
-#businesses .business-card.list a{
+#businesses .business-card.list a {
     margin: 0;
     padding: 0;
     border: none;
     background-color: var(--background-main);
-    border-radius: none;
+    border-radius: 0;
     color: var(--secondary-color);
     text-decoration: underline;
     font-size: small;
-    font-style: oblique;    
+    font-style: oblique;
 }
 
-.business-card a:hover{
+.business-card a:hover {
     background-color: var(--secondary-color);
     color: var(--background-main);
     border: none;

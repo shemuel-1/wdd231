@@ -19,7 +19,13 @@ async function displayBusinessCards() {
     members.forEach(member => {
       // Create card container
       const card = document.createElement('div');
-        card.classList.add('business-card');
+      card.classList.add('business-card');
+      
+      const layoutBtn = document.getElementById("layout");
+      layoutBtn.addEventListener("click", () => {
+        businessesSection.classList.toggle("list");
+      });
+      
 
       // Fill card with member info 
         card.innerHTML = `
