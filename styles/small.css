@@ -94,6 +94,14 @@ header img {
 
 }
 
+nav #current {
+    background-color: var(--color-background); 
+}
+
+nav #current a{
+    color: var(--text-color);
+}
+
 main{
     margin: 15px;
     font-family: var(--body-font);
