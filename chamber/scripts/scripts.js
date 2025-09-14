@@ -29,7 +29,7 @@ async function displayBusinessCards() {
 
       // Fill card with member info 
         card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} image" width="280">
+        <img src="${member.image}" alt="${member.name} image" loading="lazy" width="280">
         <h3>${member.name}</h3>
         <p><strong>Address: </strong>${member.address}</p>
         <p><strong>Phone: </strong>${member.phone}</p>
