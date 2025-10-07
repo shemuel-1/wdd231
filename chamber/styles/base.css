@@ -127,11 +127,11 @@ main {
     display: none;
 }
 
-.business-card.list{
+.business-card.list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap:8px;
-    max-width:100%;
+    gap: 8px;
+    max-width: 100%;
     font-size: smaller;
     border: none;
     margin: 1%;
@@ -196,7 +196,7 @@ main {
     padding: 10px 20px 10px 20px;
     margin-top: 20px;
     background-color: var(--background-color);
-    border:1px solid var(--supporting-color);
+    border: 1px solid var(--supporting-color);
     color: var(--text-color);
     border-radius: 8px;
     font-size: 15px;
@@ -219,6 +219,99 @@ main {
     background-color: var(--secondary-color);
     color: var(--background-main);
     border: none;
+}
+
+#homeMain {
+    border-left: 0;
+    width: 100%;
+    margin: auto;
+}
+
+#hero {
+    position: relative;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+.heroHeading {
+    position: absolute;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    opacity: 0.9;
+    padding: 25px;
+    text-align: cen;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    width: 100%;
+    top: 20px;
+}
+
+.callToAction {
+    margin: 3%;
+    padding: 20px;
+    font-family: var(--body-font);
+    line-height: 1.3;
+    text-align: left;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.callToAction h2 {
+    font-size: 0.9rem;
+    font-family: var(--heading-font);
+}
+
+.callToAction p {
+    margin-left: 3%;
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+
+.callToAction a {
+    margin: 50px 3%;
+    padding: 8px 40px 8px 8px;
+    background-color: var(--secondary-color);
+    color: var(--background-main);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#currentEvents{
+    margin: 3%;
+    padding: 20px;
+    font-family: var(--body-font);
+    line-height: 1.3;
+    text-align: left;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#currentEvents h2{
+    font-size: 0.9rem;
+    font-family: var(--heading-font);
+}
+
+#weatherDiv{
+    margin: 3%;
+    padding: 20px;
+    font-family: var(--body-font);
+    line-height: 1.3;
+    text-align: left;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#weatherDiv h2{
+    font-size: 0.9rem;
+    font-family: var(--heading-font);
 }
 
 footer h3 {
