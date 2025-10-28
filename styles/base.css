@@ -94,12 +94,8 @@ header img {
 
 }
 
-nav #current {
-    background-color: var(--color-background); 
-}
-
 nav #current a{
-    color: var(--text-color);
+    color: yellow;
 }
 
 main{
