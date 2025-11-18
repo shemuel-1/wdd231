@@ -132,15 +132,13 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 8px;
     max-width: 100%;
-    font-size: smaller;
     border: none;
-    margin: 1%;
+    margin: 0;
     box-shadow: none;
     border-radius: 0;
     align-items: center;
     width: 100%;
-    margin: 0;
-    font-size: 8px;
+    font-size: 0.85rem;
 }
 
 .business-card.list p {
@@ -199,7 +197,7 @@ main {
     border: 1px solid var(--supporting-color);
     color: var(--text-color);
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 0.9rem;
     font-family: var(--heading-font);
 }
 
@@ -267,7 +265,7 @@ main {
 
 .callToAction p {
     margin-left: 3%;
-    font-size: 15px;
+    font-size: 0.95rem;
     padding-bottom: 25px;
 }
 
@@ -282,7 +280,7 @@ main {
     border-radius: 3px;
 }
 
-#currentEvents{
+#currentEvents {
     margin: 3%;
     padding: 20px;
     font-family: var(--body-font);
@@ -293,25 +291,139 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#currentEvents h2{
+#currentEvents h2 {
     font-size: 0.9rem;
     font-family: var(--heading-font);
 }
 
-#weatherDiv{
+.event {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: var(--background-main);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.event p {
+    margin: 5px 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+#weatherDiv {
     margin: 3%;
     padding: 20px;
     font-family: var(--body-font);
     line-height: 1.3;
-    text-align: left;
+    text-align: center;
     background-color: var(--background-color);
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#weatherDiv h2{
+#weatherDiv p {
+    text-transform: capitalize;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+}
+
+#weatherDiv span {
+    font-weight: 500;
+    text-align: center;
+}
+
+
+#weatherDiv h2 {
     font-size: 0.9rem;
     font-family: var(--heading-font);
+}
+
+.spotlight-section {
+    margin: 3%;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+.spotlight-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.spotlight {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.spotlight-card {
+    background-color: var(--background-main);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.spotlight-card h3 {
+    margin: 10px 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.spotlight-card p {
+    margin: 8px 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.spotlight-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+.membership {
+    margin-top: 15px !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.gold {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.badge.silver {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 footer h3 {

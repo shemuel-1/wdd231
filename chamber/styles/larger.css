@@ -1,17 +1,17 @@
-@media (min-width: 38rem){
-    header{
+@media (min-width: 38rem) {
+    header {
         grid-template-columns: 50px auto;
     }
 
-    .hamburger{
+    .hamburger {
         display: none;
     }
 
-    #heading{
-        font-size: 1.2rem;
+    #heading {
+        font-size: 1.5rem;
     }
 
-    .navigation{
+    .navigation {
         display: block;
         background-color: var(--text-color);
     }
@@ -32,20 +32,20 @@
         text-align: center;
         padding: 0;
         font-family: var(--heading-font);
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
-    nav ul li:hover{
+    nav ul li:hover {
         background-color: var(--accent-color);
     }
 
-    .navigation ul li a:hover{
+    .navigation ul li a:hover {
         text-decoration: underline;
         color: var(--text-color);
     }
 
     nav #current:hover {
-    background-color: var(--accent-color);
+        background-color: var(--accent-color);
     }
 
     .cards {
@@ -54,15 +54,15 @@
         gap: 1rem;
     }
 
-    .cards.list{
+    .cards.list {
         display: block;
     }
 
-    .business-card.list{
-        font-size: 15px;
+    .business-card.list {
+        font-size: 1rem;
     }
 
-    footer{
+    footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
@@ -70,8 +70,19 @@
         justify-items: center;
     }
 
-    footer #socials{
+    footer #socials {
         align-items: center;
         gap: 1rem;
+    }
+
+    .spotlight {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Constrain hero image on large screens */
+    #hero img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
     }
 }
