@@ -62,6 +62,22 @@
         font-size: 1rem;
     }
 
+    /* Join page layout: form and cards side-by-side */
+    #joinMain {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    #joinMain>form {
+        grid-column: 1;
+    }
+
+    #joinMain>.cards {
+        grid-column: 2;
+        border-radius: 8px;
+    }
+
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -84,5 +100,11 @@
         max-height: 450px;
         width: 100%;
         object-fit: cover;
+    }
+
+    /* Modal dialog sizing on larger screens */
+    .modal-dialog {
+        max-width: 720px;
+        padding: 1.25rem;
     }
 }

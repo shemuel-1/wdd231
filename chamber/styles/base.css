@@ -443,6 +443,206 @@ footer h3 {
     width: 30px;
 }
 
+
+/* ================== Form, cards, modals, and animation ================== */
+.container {
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 1rem
+}
+
+/* Basic form layout and controls */
+form {
+    background: var(--color-background);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06)
+}
+
+form label {
+    display: block;
+    margin-bottom: .75rem
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=tel],
+form textarea,
+form select {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem
+}
+
+/* Membership cards */
+.cards {
+    display: grid;
+    gap: .8rem
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.05rem
+}
+
+.card p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.card a {
+    margin-top: auto;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Entrance animation for cards (runs on load) */
+.cards .card {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: cardIn .6s forwards
+}
+
+.cards .card:nth-child(1) {
+    animation-delay: .15s
+}
+
+.cards .card:nth-child(2) {
+    animation-delay: .3s
+}
+
+.cards .card:nth-child(3) {
+    animation-delay: .45s
+}
+
+.cards .card:nth-child(4) {
+    animation-delay: .6s
+}
+
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+
+/* Modal base styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.25rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .18s ease;
+    z-index: 1200;
+    -webkit-font-smoothing: antialiased;
+}
+
+.modal[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1
+}
+
+.modal-dialog {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 720px;
+    width: 100%;
+    padding: 1.25rem;
+    box-shadow: 0 12px 40px rgba(12, 20, 30, 0.35);
+    max-height: 90vh;
+    overflow: auto;
+    transform: translateY(6px);
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+.modal[aria-hidden="false"] .modal-dialog {
+    transform: none
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: .6rem
+}
+
+.modal-header h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary-color)
+}
+
+.close-btn {
+    background: transparent;
+    border: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: .1rem .4rem;
+    border-radius: 6px
+}
+
+.close-btn:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px
+}
+
+.modal-body {
+    padding-top: .6rem;
+    color: var(--text-color);
+    line-height: 1.6
+}
+
+.submit-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: .5rem
+}
+
+input[type=submit] {
+    background: var(--text-color);
+    color: #fff;
+    border: 0;
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+/* Utility: visually hidden (if not already present) */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap
+}
+
 footer {
     font-family: var(--body-font);
     font-size: small;
@@ -451,4 +651,54 @@ footer {
     color: var(--background-color);
     padding: 2%;
     font-weight: 500;
+}
+
+/* Styles specifically for join page membership cards */
+.cards {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--background-main, #fff);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary-color, #0A2239);
+}
+
+.card p {
+    margin: 0;
+    color: var(--text-color, #222);
+    font-size: 0.95rem;
+}
+
+.card a {
+    margin-top: auto;
+    color: var(--secondary-color, #E63946);
+    text-decoration: underline;
+}
+
+/* subtle entrance animation */
+.cards .card {
+    opacity: 0;
+    transform: translateY(6px);
+    animation: cardIn .45s forwards;
+}
+
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -16,12 +16,11 @@ async function apiFetchWeather() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayResults(data);
-        }else {
+        } else {
             throw Error(await response.text);
         }
-    } catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
@@ -31,25 +30,27 @@ async function apiFetchForecast() {
         const response = await fetch(forecastURL);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayForecast(data);
-        }else {
+        } else {
             throw Error(await response.text);
         }
-    } catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
 
 function displayResults(data) {
-    temperature.innerHTML = `${data.main.temp}&deg;C`;
-    description.innerHTML = data.weather[0].description;
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-    icon.setAttribute('src', iconsrc);
-    icon.setAttribute('alt', data.weather[0].description);
+    if (temperature) temperature.innerHTML = `${data.main.temp}&deg;C`;
+    if (description) description.innerHTML = data.weather[0].description;
+    if (icon) {
+        const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        icon.setAttribute('src', iconsrc);
+        icon.setAttribute('alt', data.weather[0].description);
+    }
 }
 
 function displayForecast(data) {
+    if (!forecast || !data || !data.list || data.list.length <= 16) return;
     forecast.innerHTML = `${data.list[16].main.temp}&deg;C`;
 }
 

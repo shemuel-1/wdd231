@@ -10,6 +10,7 @@ async function displaySpotlight() {
         const spotlightMembers = shuffled.slice(0, 2);
 
         const spotlightDiv = document.querySelector('.spotlight');
+        if (!spotlightDiv) return; // page doesn't have a spotlight section
         spotlightDiv.innerHTML = '';
 
 

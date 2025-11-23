@@ -1,0 +1,27 @@
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem
+}
+
+.summary {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06)
+}
+
+.summary h2 {
+    margin-top: 0
+}
+
+.summary dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: .5rem .75rem
+}
+
+.note {
+    margin-top: 1rem;
+    color: #666
+}
