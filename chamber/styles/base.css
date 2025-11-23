@@ -240,7 +240,7 @@ main {
     background-color: var(--accent-color);
     opacity: 0.9;
     padding: 25px;
-    text-align: cen;
+    text-align: center;
     font-family: var(--heading-font);
     font-size: 1rem;
     width: 100%;
