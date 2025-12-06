@@ -1,0 +1,142 @@
+/* Mobile-first styles */
+:root {
+    --gap: 16px;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --accent: #0b6bd6;
+}
+
+main.discover-main {
+    padding: 20px;
+}
+
+.visit-message {
+    background: #f7f8fb;
+    border: 1px solid var(--card-border);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.discover-grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.card figure {
+    margin: 0 0 8px 0;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition: transform 250ms ease, filter 250ms ease;
+}
+
+.card address {
+    font-style: normal;
+    color: #444;
+    margin: 6px 0;
+}
+
+.card p {
+    flex: 1 1 auto;
+}
+
+.card button {
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Medium screens: two columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* Large screens: four columns with named template areas to allow differing placement */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    /* Hover effects only enabled for non-mobile-large screens */
+    .card img:hover {
+        transform: scale(1.05) rotate(-0.5deg);
+        filter: brightness(1.05) saturate(1.05);
+    }
+}
+
+/* assign grid-area names to each card element */
+.card[data-area="card1"] {
+    grid-area: card1
+}
+
+.card[data-area="card2"] {
+    grid-area: card2
+}
+
+.card[data-area="card3"] {
+    grid-area: card3
+}
+
+.card[data-area="card4"] {
+    grid-area: card4
+}
+
+.card[data-area="card5"] {
+    grid-area: card5
+}
+
+.card[data-area="card6"] {
+    grid-area: card6
+}
+
+.card[data-area="card7"] {
+    grid-area: card7
+}
+
+.card[data-area="card8"] {
+    grid-area: card8
+}

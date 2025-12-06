@@ -27,11 +27,15 @@
     <!-- ****************** LINKS TO CSS ******************** -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <link rel="stylesheet" href="../styles/normalize.css">
 
     <!-- ****************** LINKS TO JAVASCRIPT ******************** -->
     <script src="scripts/scripts.js" defer></script>
-    <title>Directory - Accra Chamber Of Commerce</title>
+    <script type="module" src="scripts/displayweather.mjs"></script>
+    <script type="module" src="scripts/displayspotlight.mjs"></script>
+    <script type="module" src="scripts/displayDiscover.mjs"></script>
+    <title>Discover - Accra Chamber Of Commerce</title>
 </head>
 
 <body>
@@ -43,18 +47,13 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li id="current"><a href="directory.html">Directory</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li id="current"><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <main>
-        <h1>Local Business Directory</h1>
-        <div class="layout-btns">
-            <button class="layout" id="layout" aria-label="toggle grid or list view"><img
-                    src="images/list-format-icon.svg" alt="grid format"></button>
-        </div>
-        <div id="businesses" class="cards"></div>
+    <main id="homeMain">
+
     </main>
     <footer>
         <div>
