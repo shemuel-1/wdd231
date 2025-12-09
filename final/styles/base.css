@@ -1,0 +1,407 @@
+/* Simple site-wide styles for iCook - base (mobile-first)
+   Colors from site plan: primary #096B6B, accent #E76F51
+*/
+
+:root {
+    --primary: #054d4d;
+    --accent: #91330e;
+    --white: #ffffff;
+    --bg: #d4d4d4;
+    --text: #1a1a1a;
+    --muted: #444;
+    --border: #aaa;
+    --radius: 8px;
+}
+
+body {
+    font-family: 'Quicksand', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px
+}
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+/* Header */
+.mast {
+    background: var(--primary);
+    color: var(--white);
+    padding: 16px 0
+}
+
+.mast .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+.brand {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    margin: 0
+}
+
+.brand a {
+    color: var(--white);
+    text-decoration: none
+}
+
+nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0
+}
+
+nav.main-nav li {
+    margin: 0
+}
+
+nav.main-nav a {
+    color: var(--white);
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block
+}
+
+nav.main-nav .current a {
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 600
+}
+
+/* Main content sections */
+main {
+    flex: 1;
+    padding: 24px 0
+}
+
+section {
+    margin-bottom: 24px
+}
+
+/* Hero / CTA */
+.hero {
+    background:
+        linear-gradient(rgba(14, 122, 122, 0.45), rgba(9, 107, 107, 0.45)),
+        url('../images/icook-hero.webp') center/cover no-repeat;
+    color: var(--white);
+    padding: 32px 0;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+}
+
+.hero h2 {
+    color: #000;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #000;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* Highlighted text inside hero headings */
+.hero h2 .highlight {
+    background-color: #ffd700;
+    color: var(--primary);
+    padding: 0.08em 0.4em;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    line-height: 1;
+}
+
+.join-cta,
+.recipes-cta,
+.discover-cta {
+    background:
+        linear-gradient(rgba(14, 122, 122, 0.45), rgba(9, 107, 107, 0.45)),
+        url('../images/icook-hero.webp') center/cover no-repeat;
+    color: var(--white);
+    padding: 32px 0;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+}
+
+.join-cta-home {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 32px 0;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.join-cta h2,
+.recipes-cta h2,
+.discover-cta h2 {
+    color: #000;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.join-cta p,
+.recipes-cta p,
+.discover-cta p {
+    color: #000;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white)
+}
+
+.btn-secondary {
+    background: var(--accent);
+    color: var(--white)
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.9
+}
+
+/* Recipe list (mobile single column) */
+.recipe-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px
+}
+
+.recipe-item {
+    background: #f5f5f5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06)
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block
+}
+
+.recipe-item h3 {
+    color: var(--primary);
+    margin: 12px 12px 6px 12px;
+    font-size: 1.1rem
+}
+
+.recipe-item p {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin: 0 12px 12px 12px
+}
+
+/* Card */
+.card {
+    background: #f5f5f5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px
+}
+
+/* Footer */
+.foot {
+    background: var(--primary);
+    color: var(--white);
+    padding: 18px 0;
+    margin-top: 32px
+}
+
+.foot a {
+    color: var(--white)
+}
+
+.foot ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.foot li {
+    margin: 0
+}
+
+/* Forms */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(9, 107, 107, 0.1)
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600
+}
+
+form>div {
+    margin-bottom: 12px
+}
+
+/* Features Section */
+.features {
+    background: #f0f0f0;
+    padding: 32px 16px;
+    margin-bottom: 24px
+}
+
+.features .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 32px
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.feature-item {
+    background: #f5f5f5;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease
+}
+
+.feature-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px)
+}
+
+.feature-item h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.15rem
+}
+
+.feature-item p {
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6
+}
+
+/* About Section */
+.about {
+    background: var(--bg);
+    padding: 32px 0;
+    margin-bottom: 24px
+}
+
+.about h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 24px
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1.05rem
+}
+
+/* Utilities */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.center {
+    text-align: center
+}
+
+/* Accessibility focus */
+:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px
+}

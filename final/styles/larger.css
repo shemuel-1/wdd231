@@ -1,0 +1,51 @@
+/* Wider-screen overrides for iCook */
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (min-width: 1024px) {
+    nav.main-nav ul {
+        gap: 16px
+    }
+
+    .hero,
+    .join-cta,
+    .recipes-cta,
+    .discover-cta {
+        padding: 48px 0
+    }
+
+    .hero h2,
+    .join-cta h2,
+    .recipes-cta h2,
+    .discover-cta h2 {
+        font-size: 2.25rem
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+        padding: 0 32px
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
