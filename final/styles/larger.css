@@ -12,6 +12,36 @@
     .grid-2 {
         grid-template-columns: repeat(2, 1fr)
     }
+
+    nav.main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0
+    }
+
+    nav.main-nav li {
+        margin: 0
+    }
+
+    nav.main-nav a {
+        color: var(--white);
+        padding: 6px 10px;
+        border-radius: 6px;
+        display: inline-block
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    
 }
 
 @media (min-width: 1024px) {
