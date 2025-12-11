@@ -257,6 +257,81 @@ blockquote {
     margin: 0 12px 12px 12px
 }
 
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+.modal.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal__dialog {
+    position: relative;
+    z-index: 2;
+    width: min(92vw, 720px);
+    max-height: 92vh;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+.modal__content {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    overflow: auto;
+    max-height: calc(92vh - 60px);
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+.modal.is-open {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.modal__dialog {
+    width: 100vw;
+    max-height: 90vh;
+    border-radius: 16px 16px 0 0;
+}
+
+.modal__content {
+    max-height: calc(90vh - 60px);
+}
+
 /* Card */
 .card {
     background: #f5f5f5;
@@ -322,9 +397,9 @@ input[type="submit"] {
     max-width: 500px;
 }
 
-input::placeholder{
+input::placeholder {
     font-style: oblique;
-    
+
 }
 
 label {

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Samuel Okwan Paintsil">
-    <meta name="description" content="Find a variety of delicious recipes on iCook, your go-to platform for culinary inspiration and cooking tips.">
+    <meta name="description"
+        content="Find a variety of delicious recipes on iCook, your go-to platform for culinary inspiration and cooking tips.">
     <title>Recipes - iCook</title>
 
     <!-- ***************** SOCIAL MEDIA META TAGS *********************** -->
@@ -19,6 +20,9 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="../styles/normalize.css">
+
+    <!-- ****************** SCRIPTS ************************ -->
+    <script src="scripts/recipes.mjs" type="module" defer></script>
 
     <!-- ****************** FAVICON ******************** -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -49,14 +53,25 @@
             <div class="container">
                 <h2>Explore Our Recipe Collection</h2>
                 <p>Browse through a diverse range of recipes to find your next favorite dish.</p>
-                <a href="discover.html" class="btn-primary">Discover Recipes</a>
+                <a href="discover.html" id="discover-btn" class="btn-primary">Discover Recipes</a>
             </div>
         </section>
-        <section class="recipe-list">
-            <div class="container">
+        <section class="container">
+            <div id="recipes-container" class="recipe-list">
                 <!-- Recipe items will go here -->
             </div>
         </section>
+
+        <!-- Reusable modal -->
+        <div id="recipe-modal" class="modal" aria-hidden="true">
+            <div class="modal__backdrop" data-close="true"></div>
+
+            <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal__close" type="button" aria-label="Close" data-close="true">x</button>
+                <div class="modal__content"><!-- filled dynamically --></div>
+            </div>
+
+        </div>
     </main>
     <footer class="foot">
         <div class="container">

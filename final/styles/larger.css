@@ -46,6 +46,127 @@
     }
 
     .recipe-list {
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
     }
+
+
+    /* Grid */
+    .recipes-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 16px;
+    }
+
+    .recipe-card {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .08), 0 6px 18px rgba(0, 0, 0, .06);
+        cursor: pointer;
+        transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    }
+
+    .recipe-card img {
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        display: block;
+        background: #f6f6f6;
+    }
+
+    .recipe-card h3 {
+        font-size: 1rem;
+        margin: 10px 12px 12px;
+    }
+
+    /* Modal */
+    .modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+    }
+
+    .modal.is-open {
+        display: block;
+    }
+
+    .modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .5);
+    }
+
+    .modal__dialog {
+        position: relative;
+        z-index: 2;
+        max-width: 720px;
+        margin: 5vh auto;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    }
+
+    .modal__close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .modal__content {
+        padding: 16px;
+        display: grid;
+        gap: 16px;
+    }
+
+    .modal__title {
+        font-size: 1.25rem;
+        margin: 0 0 8px;
+    }
+
+    .modal__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .modal__image img {
+        width: 100%;
+        border-radius: 8px;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    .ingredients {
+        list-style: disc;
+        padding-left: 18px;
+        margin: 0;
+    }
+
+    .instructions {
+        font-size: .95rem;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        max-height: 40vh;
+        overflow: auto;
+        border: 1px solid #f0f0f0;
+        padding: 10px;
+        border-radius: 8px;
+        background: #fafafa;
+    }
+
 }
